@@ -12,7 +12,7 @@ Procedimentos :
                   
          2 - Criação do S3 - bucket para o upload de arquivo(s) CSV - Front End em Angular.js
          
-                  https://s3.console.aws.amazon.com/s3/buckets/agriculturainteligente/?region=us-east-1
+                  https://s3-sa-east-1.amazonaws.com/agriculturainteligente/index.html
          
                   * Geração do arquivos do Front-End Angular.js
          
