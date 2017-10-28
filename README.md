@@ -2,7 +2,7 @@
 
 Repositorio utilizado para o Hexagon-Desafio 
 
-Uso do framework chalice
+Uso do(s) framework chalice, serverless e ng
 
 Procedimentos :
 
@@ -50,9 +50,14 @@ Procedimentos :
         
                * Uso do CloudFormation
                
-aws cloudformation package --template-file C:\hexagon\markov-model\package\sam.json --s3-bucket agriculturainteligente --output-template-file C:\hexagon\markov-model\package\packaged.yaml
+                  aws cloudformation package 
+                           --template-file C:\hexagon\markov-model\package\sam.json 
+                           --s3-bucket agriculturainteligente 
+                           --output-template-file C:\hexagon\markov-model\package\packaged.yaml
 
         
         12 - Execução do Deploy
         
-aws cloudformation deploy --template-file C:\hexagon\markov-model\package\packaged.yaml --stack-name hexagon-desafio
+                  aws cloudformation deploy 
+                           --template-file C:\hexagon\markov-model\package\packaged.yaml 
+                           --stack-name hexagon-desafio
