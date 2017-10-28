@@ -49,6 +49,10 @@ Procedimentos :
         11 - Preparação do Deploy
         
                * Uso do CloudFormation
+               
+aws cloudformation package --template-file C:\hexagon\markov-model\package\sam.json --s3-bucket agriculturainteligente --output-template-file C:\hexagon\markov-model\package\packaged.yaml
+
         
         12 - Execução do Deploy
-
+        
+aws cloudformation deploy --template-file C:\hexagon\markov-model\package\packaged.yaml --stack-name hexagon-desafio
