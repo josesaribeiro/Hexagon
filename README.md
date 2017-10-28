@@ -19,6 +19,36 @@ Procedimentos :
          3 - Criação do DynamoDB para persistir os dados dos arquivos CSV
                   
                   * Script para a geração da(s) tabelas, collection e itens
+                  
+                  aws dynamodb create-table 
+                           --table-name Diarias 		
+                           --attribute-definitions 
+                                    AttributeName=CodigoOrgaoSuperior,AttributeType=S	
+                                    AttributeName=NomeOrgaoSuperior,AttributeType=S	
+                                    AttributeName=COdigoOrgaoSubordinado,AttributeType=S	
+                                    AttributeName=NomeOrgaoSubordinado,AttributeType=S	
+                                    AttributeName=COdigoUnidadeGestora,AttributeType=S	
+                                    AttributeName=NomeUnidadeGestora,AttributeType=S	
+                                    AttributeName=COdigoFuncao,AttributeType=S	
+                                    AttributeName=NomeFuncao,AttributeType=S	
+                                    AttributeName=COdigoSubfuncao,AttributeType=S	
+                                    AttributeName=NomeSubuncao,AttributeType=S	
+                                    AttributeName=COdigoPrograma,AttributeType=S	
+                                    AttributeName=NomePrograma,AttributeType=S	
+                                    AttributeName=COdigoAcao,AttributeType=S	
+                                    AttributeName=NomeAcao,AttributeType=S	
+                                    AttributeName=LinguagemCidada,AttributeType=S	
+                                    AttributeName=CPFFavorecido,AttributeType=S	
+                                    AttributeName=NomeFavorecido,AttributeType=S	
+                                    AttributeName=Documento,AttributeType=S 
+                                    AttributeName=Pagamento,AttributeType=S	
+                                    AttributeName=GestaoPagamento,AttributeType=S	
+                                    AttributeName=DataPagamento,AttributeType=S	
+                                    AttributeName=ValorPagamento,AttributeType=S
+                           --key-schema 
+                                    AttributeName=CPFFavorecido,KeyType=HASH 
+                                    AttributeName=NomeFavorecido,KeyType=RANGE 
+                           --provisioned-throughput ReadCapacityUnits=10, WriteCapacityUnits=5
          
          4 - Criação da Lambda function para ler o arquivo(s) CSV 
          
