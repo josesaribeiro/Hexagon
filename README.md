@@ -10,12 +10,16 @@ Procedimentos :
          
                   * IAM - User - Policy
                   
-         2 - Criação do S3 - bucket para o upload de arquivo(s) CSV - Front End em Angular.js
+         2 - Criação do S3 - bucket para Front End - Upload de arquivos : formato csv
+
+                  2.1 - Criação do Bucket - Nome : agriculturainteligente
+                  2.2 - Configuração do Bucket como um web hosting static
+                  2.3 - Geração de um boilerplate - front-end - utilizando ng , um framework angular
+                  2.4 - Definição e implementação do front-end - angular
+                  
+                  Acesso ao front-end : 
          
-                  https://s3-sa-east-1.amazonaws.com/agriculturainteligente/index.html
-         
-                  * Geração do arquivos do Front-End Angular.js
-         
+
          3 - Criação do DynamoDB para persistir os dados dos arquivos CSV
                   
                   * Script para a geração da(s) tabelas, collection e itens
