@@ -6,50 +6,40 @@ Uso do(s) framework chalice, serverless e ng
 
 Procedimentos :
 
-         1 - Criação de um usuario com as permissões
+         1 - Criação de um usuário para a aplicação
          
-                  * IAM - User - Policy
+                  * IAM - Roles - Policy
                   
-         2 - Criação do S3 - bucket para o upload de arquivo(s) CSV - Front End em Angular.js
-         
-                  https://s3.console.aws.amazon.com/s3/buckets/agriculturainteligente/?region=us-east-1
-         
-                  * Geração do arquivos do Front-End Angular.js
-         
-         3 - Criação do DynamoDB para persistir os dados dos arquivos CSV
+         2 - Criação dos Buckets no S3 
+
+				Bucket para o Front End - Upload de arquivos : formato csv
+
+                  2.1 - Criação do Bucket - Nome : Hexagon
+                  2.2 - Configuração do Bucket como um web hosting static
+                  2.3 - Geração de um boilerplate - front-end - utilizando ng , um framework angular
+                  2.4 - Definição e implementação do front-end - angular
                   
-                  * Script para a geração da(s) tabelas, collection e itens
+                  Acesso ao front-end : 
+                  Etapas 
                   
-                  aws dynamodb create-table 
-                           --table-name Diarias 		
-                           --attribute-definitions 
-                                    AttributeName=CodigoOrgaoSuperior,AttributeType=S	
-                                    AttributeName=NomeOrgaoSuperior,AttributeType=S	
-                                    AttributeName=COdigoOrgaoSubordinado,AttributeType=S	
-                                    AttributeName=NomeOrgaoSubordinado,AttributeType=S	
-                                    AttributeName=COdigoUnidadeGestora,AttributeType=S	
-                                    AttributeName=NomeUnidadeGestora,AttributeType=S	
-                                    AttributeName=COdigoFuncao,AttributeType=S	
-                                    AttributeName=NomeFuncao,AttributeType=S	
-                                    AttributeName=COdigoSubfuncao,AttributeType=S	
-                                    AttributeName=NomeSubuncao,AttributeType=S	
-                                    AttributeName=COdigoPrograma,AttributeType=S	
-                                    AttributeName=NomePrograma,AttributeType=S	
-                                    AttributeName=COdigoAcao,AttributeType=S	
-                                    AttributeName=NomeAcao,AttributeType=S	
-                                    AttributeName=LinguagemCidada,AttributeType=S	
-                                    AttributeName=CPFFavorecido,AttributeType=S	
-                                    AttributeName=NomeFavorecido,AttributeType=S	
-                                    AttributeName=Documento,AttributeType=S 
-                                    AttributeName=Pagamento,AttributeType=S	
-                                    AttributeName=GestaoPagamento,AttributeType=S	
-                                    AttributeName=DataPagamento,AttributeType=S	
-                                    AttributeName=ValorPagamento,AttributeType=S
-                           --key-schema 
-                                    AttributeName=CPFFavorecido,KeyType=HASH 
-                                    AttributeName=NomeFavorecido,KeyType=RANGE 
-                           --provisioned-throughput ReadCapacityUnits=10, WriteCapacityUnits=5
-         
+                  Back-end : 
+                           Framework : Serveless
+                           sls create --template aws-python --path hexagon-backend
+
+         3 - Criação do modelo de dados no DynamoDB para persistência dos mesmos.
+		 
+			 3.1 - Criação de um arquivo JSON com o modelo de dados a ser implementado.
+			 
+					* arquivo : tabelasDynamoDb.json
+			 
+			 3.2 - Criação local das tabelas no DynamoDB
+			 
+				    > aws dynamodb create-table --cli-input-json file://tabelasDynamoDb.json --endpoint-url http://localhost:8000
+			 
+			 3.3 - Criação remota das tabelas no DynamoDB
+		 
+					> aws dynamodb create-table --cli-input-json file://tabelasDynamoDb.json --region sa-west-1
+     
          4 - Criação da Lambda function para ler o arquivo(s) CSV 
          
                  *  Criação de um notebook com jupyter notebook para testes
