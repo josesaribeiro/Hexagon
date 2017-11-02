@@ -27,6 +27,30 @@ Procedimentos :
 
  3 - Criação do modelo de dados no DynamoDB para persistência dos mesmos.
  
+		Código Órgão Superior
+		Nome Órgão Superior
+		Código Órgão Subordinado
+		Nome Órgão Subordinado
+		Código Unidade Gestora
+		Nome Unidade Gestora
+		Código Função
+		Nome Função
+		Código Subfunção
+		Nome Subunção
+		Código Programa
+		Nome Programa	
+		Código Ação
+		Nome Ação	
+		Linguagem Cidadã	
+		CPF Favorecido	
+		Nome Favorecido	
+		Documento 
+		Pagamento	
+		Gestão 
+		Pagamento	
+		Data Pagamento	
+		Valor Pagamento
+ 
 	 3.1 - Criação de um arquivo JSON com o modelo de dados a ser implementado, segue nome do arquivo:
 	 
 			* tabelasDynamoDb.json
