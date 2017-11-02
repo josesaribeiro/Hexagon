@@ -1,8 +1,7 @@
-# Hexagon
+# Hexagon - Desafio
 
-Repositorio utilizado para o Hexagon-Desafio 
-
-Uso do(s) framework chalice, serverless e ng
+Descrição :
+	Uso do(s) framework chalice, serverless e ng
 
 Procedimentos :
 
