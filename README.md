@@ -27,15 +27,15 @@ Procedimentos :
 
  3 - Criação do modelo de dados no DynamoDB para persistência dos mesmos.
  
-	 3.1 - Criação de um arquivo JSON com o modelo de dados a ser implementado.
+	 3.1 - Criação de um arquivo JSON com o modelo de dados a ser implementado, segue nome do arquivo:
 	 
-			* arquivo : tabelasDynamoDb.json
+			* tabelasDynamoDb.json
 	 
-	 3.2 - Criação local das tabelas no DynamoDB
+	 3.2 - Criação local das tabelas no DynamoDB utilizando linha de comando do sdk aws
 	 
 			> aws dynamodb create-table --cli-input-json file://tabelasDynamoDb.json --endpoint-url http://localhost:8000
 	 
-	 3.3 - Criação remota das tabelas no DynamoDB
+	 3.3 - Criação remota das tabelas no DynamoDB utilizando linha de comando do sdk aws
  
 			> aws dynamodb create-table --cli-input-json file://tabelasDynamoDb.json --region sa-east-1
 
