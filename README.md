@@ -18,10 +18,9 @@ Procedimentos :
 	  2.3 - Geração de um boilerplate - angular
 	  2.4 - Definição e implementação do front-end - angular
 	  
-
-	  Back-end : 
-			   Framework : Serveless
-			   sls create --template aws-python --path hexagon-backend
+	Back-end : 
+		Framework : Serveless
+			sls create --template aws-python --path hexagon-backend
 
  3 - Criação do modelo de dados do CSV para persistência dos mesmos.
  
