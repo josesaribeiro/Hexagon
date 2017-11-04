@@ -1,7 +1,7 @@
 # Hexagon - Desafio
 
 Descrição :
-	Uso do(s) framework chalice, serverless e ng
+	Uso do framework serverless, Gulp , Angular
 
 Procedimentos :
 
