@@ -13,19 +13,17 @@ Procedimentos :
 
 	Bucket para o Front End - Upload de arquivos : formato csv
 
-	  2.1 - Criação do Bucket - Nome : Hexagon
+	  2.1 - Criação do Bucket - Nome : hexagon-desafio
 	  2.2 - Configuração do Bucket como um web hosting static
-	  2.3 - Geração de um boilerplate - front-end - utilizando ng , um framework angular
+	  2.3 - Geração de um boilerplate - angular
 	  2.4 - Definição e implementação do front-end - angular
 	  
-	  Acesso ao front-end : 
-	  Etapas 
-	  
+
 	  Back-end : 
 			   Framework : Serveless
 			   sls create --template aws-python --path hexagon-backend
 
- 3 - Criação do modelo de dados no DynamoDB para persistência dos mesmos.
+ 3 - Criação do modelo de dados do CSV para persistência dos mesmos.
  
 		Código Órgão Superior
 		Nome Órgão Superior
