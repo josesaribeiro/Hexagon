@@ -81,11 +81,9 @@ Procedimentos :
  9 - Aplicação de tecnicas de mineração de dados
  
 		  * Uso da tecnica de agrupamento 
-		  * Regras de associação
 	   
 10 - Geração de Graficos
 
-		  * Uso do framework D3.js
 		  * Grafico de pizza para apresentar os gastos por uma dada unidade.
 
 11 - Preparação do Deploy
